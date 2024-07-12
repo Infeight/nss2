@@ -12,7 +12,6 @@ const handlechange=()=>{
 }
 
 
-
 $('#contactform').on('submit', function(event) {
     document.getElementById("share").style.visibility = "hidden"
     event.preventDefault(); // prevent reload
@@ -30,23 +29,19 @@ $('#contactform').on('submit', function(event) {
     }).done(function() {
         console.log('Your mail is sent!');
         document.getElementById("emailok").style.display = "block"
-        //    document.getElementById("share").style.display = "block"
+ 
         document.getElementById("emailok").innerText = "Query Sent Successfully! "
     }).fail(function(error) {
         console.log('Oops... ' + JSON.stringify(error));
         document.getElementById("emailok").style.display = "block"
-        //    document.getElementById("share").style.display = "block"
+  
         document.getElementById("emailok").innerText = "Sorry, There was an Error!"
     });
 });
 
 
 setInterval(()=>{
-
     document.getElementById("emailok").style.animation = "email 0.5s 0.5s 1 ease"
-
-    
-//   console.log("hi")
 },2000)
 
 setInterval(()=>{

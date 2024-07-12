@@ -22,12 +22,7 @@ const events = async()=>{
          btoa(
             arr.reduce((data, byte) => data + String.fromCharCode(byte), '')
          );
-    
-//    const base64pdf =   btoa(
-//     pdfarr.reduce((data, byte) => data + String.fromCharCode(byte), '')
-//  );
-   
-    
+        
   const eventsdisp =   document.createElement("section");
   const eventname = document.createElement("h2")
   const eventsimage = document.createElement("img")
@@ -37,7 +32,6 @@ const events = async()=>{
 eventsdisp.className = "eve_matter_cont";
 eventname.className = "pre-head"
 eventmatter.className ="pre"
-
 
 eventname.innerHTML = element.name;
 eventmatterp.innerHTML = element.event;
@@ -58,8 +52,6 @@ document.getElementById("events_cont").appendChild(eventsdisp);
   });
 } 
 events();
-
-
 
 
 document.getElementById("selbtn11").addEventListener("click",openhome)
