@@ -1,8 +1,8 @@
 
 
 const upeve = async()=>{
-    const data = await fetch('http://localhost:5001/upevents');
-    const exp = await fetch('http://localhost:5001/experience')
+    const data = await fetch('https://nss2server.vercel.app/upevents');
+    const exp = await fetch('https://nss2server.vercel.app/experience')
     const allupevents =await data.json();
     const allexp = await exp.json();
     console.log(allupevents)
@@ -79,7 +79,7 @@ document.getElementById("share").addEventListener("click", async()=>{
         Exp:document.getElementById("exp-matter").value
     }
 
- await fetch ("http://localhost:5001/experience",{method:"post", headers: { "Content-Type": "application/json" }, body: JSON.stringify(exp)})
+ await fetch ("https://nss2server.vercel.app/experience",{method:"post", headers: { "Content-Type": "application/json" }, body: JSON.stringify(exp)})
  .then().then( window.location.reload())
  
 

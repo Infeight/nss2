@@ -29,7 +29,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-app.use(express.static(path.join(__dirname, 'public')))
+// app.use(express.static(path.join(__dirname, 'public')))
 
 
 const port = 5001;
@@ -80,7 +80,8 @@ const upeventupload =  multer({
 
 // });
 app.get('/', (req, res) => {
-  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  res.send("Server Up and Running")
 })
 
 
@@ -105,7 +106,8 @@ app.post('/uploadimg' ,(req,res)=>{
   })
   // console.log(req.body)
   // console.log(req.file)
-  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  res.redirect('/')
 })
 
 app.post('/uploadpdf' ,(req,res)=>{
@@ -128,7 +130,8 @@ app.post('/uploadpdf' ,(req,res)=>{
   })
   // console.log(req.body)
   // console.log(req.file)
-  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  res.redirect('/')
 })
 
 app.post('/upevents' ,(req,res)=>{
@@ -154,7 +157,8 @@ app.post('/upevents' ,(req,res)=>{
   })
   // console.log(req.body)
   // console.log(req.file)
-  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  res.redirect('/')
 })
 
 
