@@ -85,13 +85,13 @@ app.get('/', (req, res) => {
 })
 
 
-app.post('/uploadimg' ,(req,res)=>{
+app.post('/uploadimg' ,async(req,res)=>{
   upload(req,res,(err)=>{
     if(err){
       console.log(err)
     }
     else{
-      const newImage = new image.image({
+      const newImage =  new  image.image({
         name: req.body.name,
         event:req.body.event,
         image:{
@@ -102,12 +102,13 @@ app.post('/uploadimg' ,(req,res)=>{
       newImage.save()
       .then(()=>{console.log('succesfully uploaded')})
       .catch(err=>{console.log(err)})
+      res.redirect('/')
      }
   })
   // console.log(req.body)
   // console.log(req.file)
   // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
-  res.redirect('/')
+
 })
 
 app.post('/uploadpdf' ,(req,res)=>{
@@ -124,14 +125,14 @@ app.post('/uploadpdf' ,(req,res)=>{
         }
       })
       newPdf.save()
-      .then(()=>{console.log('succesfully uploaded')})
+      .then(()=>{res.redirect('/')})
       .catch(err=>{console.log(err)})
      }
   })
   // console.log(req.body)
   // console.log(req.file)
   // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
-  res.redirect('/')
+  
 })
 
 app.post('/upevents' ,(req,res)=>{
