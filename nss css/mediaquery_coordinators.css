@@ -1,0 +1,251 @@
+@media screen and (max-width: 480px) {
+    .logo {
+        top: 2%;
+        height: 10vw;
+    }
+
+    .logo img {
+        width: 100%;
+        height: 115%;
+    }
+
+    .colname {
+        position: absolute;
+        left: 50vw;
+
+    }
+
+    .clglogo {
+        width: 10.5vw;
+        height: 8.5vw;
+        left: 89vw;
+
+    }
+
+    #institute_logo {
+        position: absolute;
+    }
+
+    .header{
+        display: none;
+        flex-direction: column;
+        width: 40vw;
+        height: 90%;
+        position: absolute;
+        left: 0vw;
+        top: 17vw;
+        align-content: flex-start;
+        justify-content: center;
+        z-index: 2;
+
+    }
+    nav ul{
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: center;
+        position: absolute;
+        top: 1vw;
+        left: 1vw;
+    }
+    .selbtn1{
+        width: 20vw;
+        height: 7vw;
+        font-size: 2.5vw;
+    }
+    #selbtn12{
+        width: 20vw;
+        font-size: 2.3vw;
+    }
+    .selbtn1:hover{
+        background-color: #e53624;
+        color: white;
+    }
+    #options{
+        top: 18vw;
+        display:initial ;
+        z-index: 3;
+    }
+    .member-opt{
+        
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-items: unset;
+        align-content: space-around;
+        position: relative;
+        justify-content: center;
+        top: 57vw;
+        left: 13.4vw;
+        border: none;
+        border-radius: 0px 0px 0px 0px;
+        background-color: #31398a;
+        width: 16vw;
+        height: 9vw;
+        z-index: 2;
+        align-items: center;
+        
+    }
+    #selbtn14{
+        display: none;
+    }
+    #selbtn114{
+        display:initial;
+        display: initial;
+        position: absolute;
+        top: 25.3vw;
+    }
+    #member-opt{
+        height: 12vw;
+    }
+    #selbtn15{
+        transform: translateY(40px);
+    }
+    .membersbtns{
+        visibility: hidden;
+        visibility: visible;
+        height: 4.5vw;
+        width: 18vw;
+        background-color: #fff;
+        color:black;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.8vw;
+    }
+    .membersbtns:hover{
+        background-color: #e53624;
+    }
+    #member-btn{
+        opacity: 1;
+        visibility: hidden;
+        border-radius: 5px;
+        position: relative;
+        top: 0.3vw;
+    }
+    #coordinator-btn{
+        opacity: 1;
+        visibility: hidden;
+        border-radius: 5px;
+        position: relative;
+        top: -0.3vw;
+    }
+    .head {
+        top: 17vw;
+        height: 8vw;
+        font-size: 4.4vw;
+
+    }
+
+
+
+
+/* codéfor pics */
+
+
+footer{
+    z-index: 2;
+}
+
+    .foot {
+        position: relative;
+
+        top: 115vw;
+        height: 34.3rem;
+
+    }
+
+    .content {
+        flex-direction: column;
+        align-content: space-around;
+        justify-items: baseline;
+        height: auto;
+        padding: 25px 0px;
+        margin-left: -14vw;
+    }
+
+    .addresscont {
+        width: 60vw;
+        height: 30vw;
+    }
+
+    .addresscont pre {
+        font-size: 2.4vw;
+    }
+
+    .addresscont p {
+        font-size: 4vw;
+        top: -7vw;
+        left: 11vw;
+    }
+
+    .location-head {
+        top: 6vw;
+        position: relative;
+        left: -14vw;
+        font-size: 4vw;
+    }
+
+    .majorobj {
+        position: relative;
+        top: 4vw;
+        left: 6vw;
+        width: 60vw;
+        height: 30vw
+    }
+
+    .majorobj iframe {
+        width: 60vw;
+        height: 40vw;
+    }
+
+    .quicklink-head {
+        font-size: 4vw;
+        top: 36vw;
+        left: 12vw;
+    }
+
+    .quicklink {
+        height: 30vw;
+
+    }
+
+    ul {
+        top: 3.5vw;
+        left: -22vw;
+    }
+
+    li a {
+        font-size: 2.5vw;
+    }
+
+    .instalink {
+        position: relative;
+        top: -64vw;
+        left: 28vw;
+        width: 1vw;
+    }
+    .instalink pre{
+        position: relative;
+        color: white;
+        font-size: 5vw;
+        top: -8vw;
+        left: 24vw;
+    }
+
+    .instalink pre a {
+        font-size: 4.5vw;
+    }
+
+    .instalink pre a i {
+        color: white;
+        font-size: 4.5vw;
+    }
+    .copyright{
+        width: 97vw;
+        font-size: 2vw;
+        color: white;
+        position: relative;
+        top: -3vw;
+        left: 2vw;
+    }
+
+}
+

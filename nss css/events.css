@@ -1,0 +1,486 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.nssmessage{
+    display: none;
+}
+.events-head{
+    width: 100vw;
+    height: 30vw;
+    position: relative;
+    background-color: transparent;
+
+}
+.events-layer{
+    width: 100vw;
+    height:30vw;
+    position: absolute;
+    background-color:  rgb(0 0 0);
+    opacity: 45%;
+}
+.clgheading{
+    font-size: 3vw;
+    position: absolute;
+    text-align: center;
+    top: 20vw;
+    left: 5vw;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#moto{
+    width: 50%;
+    position: relative;
+    margin: 1px;
+    letter-spacing: 9px;
+    font-size: 3vw;
+    font-family: "Kanit", sans-serif;
+    color: #f9a000;
+     font-weight: 500;
+    transition-duration: 0.2s;
+
+}
+#moto:hover{
+    color: #f9a000;
+    font-size: 3.2vw;
+    transition-duration: 0.2s;
+}
+.clgheading p{
+    width:80%;
+    margin: 1px;
+    letter-spacing: 10px;
+    font-size: 6vw;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    /* font-style: italic;   */
+     color: #fff;
+    
+    
+}
+.clgpic img{
+    width: 100vw;
+    height:30vw;
+
+}
+
+#options {
+    display: none;
+    width: 5.5vw;
+    height: 5.5vw;
+    border: none;
+    outline: none;
+    /* background-color: #31398a; */
+    position: fixed;
+    left: 0vw;
+    top: 0vw;
+    padding: 0;
+
+}
+
+#options i {
+    font-size: 5vw;
+}
+#hr1{
+    visibility: hidden;
+    display: none;
+}
+
+    .header {
+        height: 3.5vw;
+        position: sticky;
+        top: 0vw;
+        box-sizing: border-box;
+        width: 100vw;
+        background-color: #fff;
+        color: #f9a000;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0.1vw 1vw black;
+        z-index: 1;
+    }
+    
+    .header ul {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        padding: 2px 20px;
+        margin: 0;
+    }
+    #nss-head-logo{
+        width: 3vw;
+        position: relative;
+    }
+    
+    .selbtn1 {
+        /* box-shadow: 5px 9px 13px black; */
+        width: 10vw;
+        height: auto;
+        border-radius: 2vw;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5vw;
+       color: #f9a000;
+        margin: 2px 20px;
+        font-weight: 600;
+        transition-duration: 0.3s;
+    }
+    
+    #selbtn12 {
+        width: 15vw;
+        font-size: 1.3vw;
+    
+    }
+    
+    .selbtn1:hover {
+        box-shadow: 0.1vw 0.1vw 0.5vw black;
+        cursor: pointer;
+        transition-duration: 0.2s;
+    }
+
+
+
+#options {
+    display: none;
+    width: 5.5vw;
+    height: 5.5vw;
+    border: none;
+    outline: none;
+    /* background-color: #31398a; */
+    position: absolute;
+    left: 0vw;
+    top: 10.5vw;
+    padding: 0;
+
+}
+
+#options i {
+    font-size: 5vw;
+}
+#selbtn114{
+    display: none;
+}
+
+.events_cont {
+    position: relative;
+    top: 1vw;
+    width: 90vw;
+    margin: auto;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+.eve_matter {
+    display: flex;
+    position: relative;
+    top: 0vw;
+    width: 100%;
+    height: 30vw;
+    background-color: #75498d;
+}
+.eve_matter_cont{
+    position: relative;
+    top: 0vw;
+    width: 100%;
+    height: auto;
+    margin: 1vw 0;
+    /* background-color: #498d6b; */
+}
+.eve_matter_cont:hover{
+    .eve-layer{
+       visibility: collapse;
+    }
+    .event-head2{
+        visibility: collapse;
+        animation-duration: 0.9s;
+    }
+}
+.eve_matter_cont img{
+  
+    width: 50%;
+    height: 25vw;
+    border: 0px solid;
+    margin: 0 25%;
+    border-radius: 2vw;
+    box-shadow: 0 0 10px black;
+}
+
+.pdf-link{
+    color: rgb(84, 173, 236);
+}
+.event-head2{
+    font-family: 'Poppins', sans-serif;
+       text-align: center;
+       font-size: 4vw;
+        position: absolute;
+        width: 100%;
+        top: 10.5vw;
+        height: 15vw;
+        color: #fff;
+        text-decoration: underline;
+        z-index: 3;
+        opacity: 85%;
+}
+
+.eve-layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+   opacity: 65%;
+   visibility: visible;
+   transition: opacity ease 2s;
+}
+/* .eve_matter_content pre{
+    display: none;
+}
+#eve11 pre{
+    display: none;
+}
+#eve12 pre{
+    display: none;
+} */
+
+.eve-matter-display {
+    
+    display: none;
+    font-size: 1.5vw;
+    padding: 10px;
+    width: 60vw;
+    height: 30vw;
+    position: fixed;
+    top: 15vw;
+    left: 20vw;
+    background-color: #ffffff;
+    z-index: 4;
+    border-radius: 15px;
+    overflow-y: auto;
+    /* box-shadow: 5px 5px 5px black; */
+
+}
+.eve-matter-display::-webkit-scrollbar{
+    display: none;
+}
+
+
+.event-display-img{
+    position: relative;
+    width: 35vw;
+    left: 12vw;
+    height: 28vh;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    /* border: 4px solid black; */
+    
+}
+#close {
+    display: none;
+    z-index: 4;
+    position: fixed;
+    top: 15.5vw;
+    left: 79vw;
+    font-weight: bolder;
+    width: 1.5vw;
+    height: 1.5vw;
+    border: none;
+    border-radius: 8px;
+    background-color: red;
+    box-shadow: 5px 5px 5px black;
+}
+
+
+/* .eve-matter-display1{
+    display: none;
+}*/
+
+.pre{
+    font-size: 1.5vw;
+    font-family: "Kanit", sans-serif;
+} 
+.pre p{
+    margin: 3px 0;
+    cursor: default;
+}
+.pre-head{
+    font-family: "Kanit", sans-serif;
+    color: #f9a000;
+    font-size: 2vw;
+    margin: 5px 0;
+}
+.pre a {
+    text-decoration: dotted;
+    color: #f9a000;
+}
+
+
+footer{ display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 3vw;
+    position: relative;
+}
+.foot{
+
+    position: relative;
+    box-sizing: border-box;
+    height: 23vw;
+    width: 100vw;
+    background-color: black;   
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 20vw;
+    width: 100vw;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.5vw;
+   
+}
+.addresscont{
+    position: relative;
+    border: none;
+    width: 25vw;
+    height: 20vw;
+    font-size: 1.2vw;
+    font-family:'Poppins', sans-serif ;
+}
+.addresscont pre{
+    font-size: 1.3vw;
+    font-family:'Poppins', sans-serif ;
+
+}
+.addresscont p{
+    font-size: 2vw;
+    position: absolute;
+    top: -4vw;
+    left: 6vw;
+    font-family:'Poppins', sans-serif ;
+}
+.quicklink-head{
+    font-size: 2vw;
+    position: absolute;
+    top: 1.5vw;
+    left: 37.5vw;
+    font-family:'Poppins', sans-serif ;
+   
+
+}
+.quicklink{
+    border: none;
+    font-size: 1.2vw;
+    width: 25vw;
+    height: 20vw;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family:'Poppins', sans-serif ;
+}
+.quicklink ul{
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    font-family:'Poppins', sans-serif ;
+
+}
+
+li{
+    list-style: none;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3vw;
+    font-family:'Poppins', sans-serif ;
+    transition-duration: 0.2s;
+
+}
+li a:hover{
+    transition-duration: 0.2s;
+    color: #f9a000;
+}
+.location-head{
+    font-size: 2vw;
+    position: relative;
+    width: 25vw;
+    height: 20vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2vw;
+    
+}
+.majorobj{
+    background-color: aliceblue;   
+    border: none;
+    width: 25vw;
+    height: 14vw;
+    justify-content: center;
+    align-items: flex-start;
+}
+.majorobj iframe{
+    width: 100%;
+    height: 100%;
+}
+.copyright{
+    font-size: 1.2vw;
+    color: white;
+    position: relative;
+    top: 1vw;
+    width: 100%;
+    text-align: center;
+
+}
+
+.instalink {
+    font-size: 1.2vw;
+    height: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family:'Poppins', sans-serif ;
+}
+
+.instalink a{
+    
+    position: relative;
+    color: white;
+    font-size: 1.2vw;
+    text-decoration: none;
+    width: fit-content;
+    font-family:'Poppins', sans-serif ;
+}
+.instalink a:hover{
+    color: #f9a000;
+    transition-duration: 0.2s;
+}
+.instalink pre a i{
+    color: white;
+    font-size: 1.5vw;
+}

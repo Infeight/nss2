@@ -1,0 +1,208 @@
+body{
+    display: flex;
+}
+.uploads{
+    width: 40vw;
+}
+.display{
+    width: 60vw;
+    top: 1vw;
+    height: auto;
+}
+.display h2{
+    margin: 0;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.5vw;
+    background-color: white;
+    z-index: 2;
+    /* position: fixed; */
+    position: sticky;
+    top: 0vw;
+}
+.events{
+    width: 40vw;
+    height: 25vw;
+    margin-bottom: 2vw;
+    border: none;
+    box-shadow: 0 0 20px black;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.events h2{
+    margin: 0;
+    font-family: monospace;
+}
+.events form{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.events form input{
+    
+        font-size: 1.5vw;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        box-shadow: 0 0 4px black;
+        box-sizing: border-box;
+        padding: 5px;
+        font-family: monospace;
+    
+}
+.events form textarea{
+    min-height: 15vw;
+    font-size: 1.5vw;
+    border-radius: 5px;
+    box-shadow: 0 0 4px black;
+    border: none;
+    outline: none;
+    max-height: 15vw;
+    box-sizing: border-box;
+    padding: 5px;
+    font-family: monospace;
+}
+.fileload{
+    font-size: 1.2vw;
+    box-shadow: 0 0 4px black;
+    background-color: orange;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-family: monospace;
+}
+button{
+    border: none;
+    outline: none;
+    box-shadow: 0 0 4px black;
+    border-radius: 5px;
+    font-size: 1.2vw;
+    background-color: #fff;
+}
+#events{
+    height: 35vw;
+    border-color: rgb(0, 221, 255);
+}
+
+#pdf{
+    height: 15vw;
+    border-color: rgb(217, 0, 255);
+}
+#upevents{
+    height: 35vw;
+    border-color: rgb(255, 247, 0);
+}
+
+.eventsdisp{
+    margin-bottom: 1vw;
+    width: 95%;
+    margin: 1vw auto;
+    height: 30vw;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 1.2vw;
+    box-shadow: 0 0 5px black;
+    overflow-y: scroll;
+}
+
+.alleventdisp{
+    height: auto;
+    width: 90%;
+    margin: auto;
+    background-color: #f5d59b;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: sans-serif;
+    font-size: 1.5vw;
+    margin-bottom: 0.5vw;
+}
+
+@media screen and (min-width:1025px) {
+    @media screen and (max-width:1400px) {
+        #pdf{
+            height: 20vw;
+        }
+        #upevents{
+            height: 40vw;
+        }
+    }
+}
+@media screen and (min-width:700px) {
+    @media screen and (max-width:1024px){
+        #events{
+            height: 42vw;
+        }
+    #pdf{
+        height: 25vw;
+    }
+    #upevents{
+        height: 45vw;
+    }
+    button{
+        font-size: 2vw;
+    }
+    .events form input{
+        font-size: 1.9vw;
+    }
+    .events form textarea {
+        font-size: 1.9vw;
+    }
+    .display h2{
+        font-size: 2.2vw
+    }
+    .alleventdisp{
+        font-size: 2vw;
+    }
+}}
+@media screen and (max-width:480px) {
+    body{
+        flex-direction: column;
+    }
+    .uploads{
+        width: 95%;
+        margin: auto;
+        font-size: 2.5vw;
+    }
+    .display{
+        width: 95%;
+        margin: auto;
+        margin: 2.5vw;
+    }
+    #events{
+        width: 100%;
+        height: 60vw;
+    }
+    #pdf{
+        width: 100%;
+        height: 50vw;
+    }
+    #upevents{
+        width: 100%;
+        height: 75vw;
+    }
+    button{
+        font-size: 4.5vw;
+    }
+    .events form input{
+        font-size: 4.5vw;
+    }
+    .events form textarea {
+        font-size: 4.5vw;
+    }
+    .display h2{
+        font-size: 5vw
+    }
+    .alleventdisp{
+        font-size: 4vw;
+    }
+    .eventsdisp{
+        height: 60vw;
+    }
+    
+}

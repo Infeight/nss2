@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>nss admin</title>
+</head>
+<body>
+
+
+
+<div class="uploads">
+    <h1 style="margin:1vw auto; text-align: center;">NSS ADMIN PAGE</h1>
+<div class="events" id="events">
+<h2>Events</h2>
+    <form action="/uploadimg" method="post" enctype="multipart/form-data">
+        <input type="text" id="eventname" name="name" placeholder="Enter event name">
+        <textarea type="text" id="eventdes"  name="event" placeholder="Enter event description"></textarea>
+        <input type="file" id="eventpic" class="files" name="testImage" placeholder="Choose an image to display for the event">
+        
+        <button type="submit" id="submitevent">Upload</button>
+    </form>
+</div>
+
+     <div class="events" id="pdf">
+        <h2>Event pdf</h2>
+   
+    <form action="/uploadpdf" method="post" enctype="multipart/form-data">
+        <input type="text" id="eventpdfname" name="name" placeholder="Enter event name">
+        <input type="file" class="files" id="eventpdf" class="fileload" name="testpdf" placeholder="Choose an image to display for the event">
+        <button id="submitpdf" type="submit">Upload</button>
+    </form> 
+</div>
+
+<div class="events" id="upevents">
+    <h2>Up coming Events</h2>
+
+
+    <form action="/upevents" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" id="upevename" placeholder="Enter event name">
+        <input type="date" name="date" id="upevedate" placeholder="Enter event date">
+        <textarea name="eventdes" id="upevedes" placeholder="Enter event description"></textarea>
+        <input type="file" class="files" id="upeveimg" name="testImage1" placeholder="Choose an image to display for the event">
+        <button type="submit" id="upevesubmit">Upload</button>
+    </form>
+
+</div>
+
+</div>
+
+<div class="display">
+    <h1 style="margin:1vw auto; text-align: center;">All Data</h1>
+   
+    <div class="eventsdisp" id="eventsdisp">
+        <h2>Events</h2>
+    </div>
+    
+    <div class="eventsdisp" id="pdfdisp">
+        <h2>Event pdfs</h2>
+    </div>
+  
+    <div class="eventsdisp" id="upeve">
+        <h2>Upcoming Events</h2>
+    </div>
+ 
+    <div class="eventsdisp" id="experience">
+        <h2>Experiences shared</h2>
+    </div>
+</div>
+
+
+<!-- <div id="eventupload"></div>
+<div id="eventpdfupload"></div>
+<div id="upeventupload"></div> -->
+
+
+</body>
+<script src="admin.js"></script>
+</html>
