@@ -105,7 +105,7 @@ app.post('/uploadimg' ,(req,res)=>{
   })
   // console.log(req.body)
   // console.log(req.file)
-  res.redirect('/')
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
 })
 
 app.post('/uploadpdf' ,(req,res)=>{
@@ -128,7 +128,7 @@ app.post('/uploadpdf' ,(req,res)=>{
   })
   // console.log(req.body)
   // console.log(req.file)
-  res.redirect('/')
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
 })
 
 app.post('/upevents' ,(req,res)=>{
@@ -154,7 +154,7 @@ app.post('/upevents' ,(req,res)=>{
   })
   // console.log(req.body)
   // console.log(req.file)
-  res.redirect('/')
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
 })
 
 
