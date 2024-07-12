@@ -64,7 +64,7 @@ body::-webkit-scrollbar{
     padding: 2px 20px;
     margin: 0;
 }
-#nss-head-logo{
+.head-logo{
     width: 3vw;
     position: relative;
 }
@@ -79,7 +79,7 @@ body::-webkit-scrollbar{
     background-color: transparent;
     font-size: 1.5vw;
    color: #f9a000;
-    margin: 2px 20px;
+    margin: 2px 14px;
     font-weight: 600;
     transition-duration: 0.3s;
 }

@@ -76,7 +76,7 @@
             display: block;
         }
      
-        #nss-head-logo {
+        .head-logo {
          display: none;
         }
         
@@ -370,7 +370,7 @@
 @media screen and (min-width: 700px){
      @media screen and (max-width:1200px) {
         
-        #nss-head-logo{
+       .head-logo{
             left: 1vw;
             width: 5vw;
         }
@@ -393,9 +393,11 @@
         }
         .selbtn1{
             font-size: 2.5vw;
+            width: fit-content;
         }
         #selbtn12{
             font-size: 1.5vw;
+            width: fit-content;
         }
         .name pre{
             font-size: 3.5vw;
