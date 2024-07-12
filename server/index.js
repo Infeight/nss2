@@ -29,7 +29,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-// app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')))
 
 
 const port = 5001;
@@ -80,8 +80,8 @@ const upeventupload =  multer({
 
 // });
 app.get('/', (req, res) => {
-  // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
-  res.send("Server Up and Running")
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  // res.send("Server Up and Running")
 })
 
 
@@ -100,9 +100,9 @@ app.post('/uploadimg' ,async(req,res)=>{
         }
       })
       newImage.save()
-      .then(()=>{console.log('succesfully uploaded')})
+      .then(()=>{res.redirect('/')})
       .catch(err=>{console.log(err)})
-      res.redirect('/')
+      
      }
   })
   // console.log(req.body)
@@ -152,14 +152,14 @@ app.post('/upevents' ,(req,res)=>{
         Date:req.body.date
       })
       newUpevent.save()
-      .then(()=>{console.log('succesfully uploaded upevents')})
+      .then(()=>{res.redirect('/')})
       .catch(err=>{console.log(err)})
      }
   })
   // console.log(req.body)
   // console.log(req.file)
   // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
-  res.redirect('/')
+  
 })
 
 
