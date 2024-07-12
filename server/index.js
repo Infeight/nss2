@@ -72,17 +72,16 @@ const upeventupload =  multer({
   Storage
 }).single("testImage1")
 
-app.get('/', function(req, res) {
-  // const allevents = image.image.find()
-  // const allpdfs = pdf.pdf.find()
-  // const allupevents = upevents.upevents.find()
-  // const allexp = experience.experience.find() 
+// app.get('/', function(req, res) {
 
-  res.sendFile(path.join(__dirname,'./index.html'))
+//   res.sendFile(path.join(__dirname,'./index.html'))
 
 
 
-});
+// });
+app.get('/', (req, res) => {
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+})
 
 
 app.post('/uploadimg' ,(req,res)=>{
