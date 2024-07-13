@@ -175,6 +175,37 @@ z-index: 0;
     position: relative;
 }
 
+#headlogo1{
+    width: 15vw;
+    position: absolute;
+    left: 3vw;
+    opacity: 60%;
+}
+#headlogo2{
+    width: 15vw;
+    position: absolute;
+    left: 71vw;
+    opacity: 60%;
+}
+
+#gotoeve {
+    width: 10vw;
+    height: 2vw;
+    background-color: orange;
+    font-size: 1.3vw;
+    position: relative;
+    z-index: 5;
+    border: 1px solid orange;
+    border-radius: 35px 35px 35px 0px;
+    box-sizing: border-box;
+    padding: 2px;
+    font-weight: 600;
+    color: white;
+    box-shadow: 2px 2px 2px black;
+cursor: pointer;
+}
+    
+
 .selbtn1 {
     /* box-shadow: 5px 9px 13px black; */
     width: 10vw;
@@ -265,11 +296,13 @@ z-index: 0;
    opacity: 0;
     left: 55vw;
     top: 23vw;
+    cursor: pointer;
 }
 #nav-prev_sneak{
  opacity: 0;
     left: 1vw;
     top: 23vw;
+    cursor: pointer;
 }
 .slider-wrap {
        /* position: relative; */
@@ -464,11 +497,11 @@ z-index: 0;
   box-shadow: 0 0 10px black;
 }
 .des-img{
-    position: absolute;
+    position: relative;
     border: 1px transparent;
     top: 2vw;
     width: 30vw;
-    height: 13vw;
+    height: 15vw;
     left: 20vw;
     border-radius: 10px;
 }
@@ -477,9 +510,9 @@ z-index: 0;
     height: 100%;
 }
 .event-des{
-    position: absolute;
+    position: relative;
     border: 1px transparent;
-    top: 16vw;
+    top: 1vw;
     width: 60vw;
     height: 13vw;
     left: 5vw;
@@ -722,13 +755,15 @@ z-index: 0;
 
     /* margin-top: auto; */
     left: 65vw;
-    top: 23vw;   
+    top: 23vw;
+    cursor: pointer;   
 }
 
 #nav-prev{
    
     left: 3vw;
     top: 23vw;
+    cursor: pointer;
    
 }
 .nssmessage{
@@ -755,6 +790,7 @@ z-index: 0;
 }
 .user-sugg h2{
     margin: 0 0;
+    font-family: "Kanit", sans-serif;
 }
 .sharehead-cont{
     display: flex;
@@ -801,14 +837,19 @@ z-index: 0;
     position: relative;
 }
 .suggestion{
-    font-size: 1.2vw;
+    height: auto;
+    font-size: 1.5vw;
+    word-wrap: break-word;
+    width: 100%;
     box-sizing: border-box;
+    padding: 2px;
 }
 .sugg-det{
     display: flex;
     justify-content: space-around;
-    font-size: 1.3vw;
-    font-weight: 600;
+    font-size: 1.2vw;
+    color: #f9a000;
+    /* font-weight: 600; */
 }
 #sugg-display-btn{
     font-size: 1.3vw;

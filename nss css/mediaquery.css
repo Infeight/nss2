@@ -148,7 +148,7 @@
     position: relative;
     /* top: 30vw; */
     margin: auto;
-    height: 60vh;
+    height:130vw;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -190,6 +190,13 @@
         text-align: center;
         text-transform: uppercase;
         /* text-decoration: underline; */
+    }
+    #gotoeve {
+        width: 35vw;
+        font-size: 4.5vw;
+        border-radius: 0px 5px 5px 0px;
+        height: 6vw;
+        top: 50vw;
     }
 
     .nav-next-prev{
@@ -267,7 +274,7 @@
         left: 5vw;
         width: 90vw;
         height: 100vw;
-        background-color: #ffbf58;
+        background-color: #fff;
         border-radius: 10px;
         z-index: 4;
         font-size: 1vw;
@@ -275,12 +282,12 @@
         box-shadow: 0 0 5px black;
     }
     .des-img {
-        position: absolute;
+        position: relative;
         /* border: 1px solid; */
-        top: 2vw;
-        width: 60vw;
-        height: 24vw;
-        left: 15vw;
+        top: 5vw;
+        width: 70vw;
+        height: 40vw;
+        left: 10vw;
         border-radius: 10px;
         box-shadow: 0 0 2px black;
     }
@@ -290,18 +297,19 @@
     
 .event-des {
     padding: 0px 5px 0px 5px;
-    font-size:3vw;
-    position: absolute;
-    box-shadow:  0 0 2px black;
-    top: 28vw;
+    font-size: 3vw;
+    position: relative;
+    box-shadow: 0 0 2px #ffbf58;
+    top: 8vw;
     width: 80vw;
-    height: 70vw;
+    height: 50vw;
     left: 3.5vw;
     border-radius: 10px;
     font-family: 'Poppins', sans-serif;
     overflow: scroll;
     background-color: white;
     opacity: 99%;
+
 }
     #close1 {
         position: absolute;
@@ -384,7 +392,7 @@
         top: 0vw;
         width: 98vw;
         height: 55vw;
-        margin: auto;
+        margin: 4vw auto;
         box-shadow: 0 0 5px;
         box-sizing: border-box;
         /* padding: 3px; */
@@ -723,6 +731,13 @@
         left: 1vw;
         width: 5vw;
     }
+    #headlogo2 {
+        top: 2vw;
+
+    } 
+    #headlogo1{
+        top: 2vw;
+    }  
     .header{
         height: 6vw;
     }
@@ -742,6 +757,12 @@
         top: 7vw;
         font-weight: 600;
         animation-name: typing2;
+    }
+    #gotoeve{
+        width: 20vw;
+        font-size: 2.5vw;
+        height: 4vw;
+        border-radius: 8px 8px  8px 0;
     }
     @keyframes typing2 {
         from { width: 0 }
@@ -977,6 +998,9 @@
     }
 }}
 @media screen and (min-width: 1025px){
+    @media screen and (max-width:1200px) {
+        
+   
     .eventscroll{
         position: relative;
     /* top: 35vw; */
@@ -990,8 +1014,18 @@
     box-shadow: 0 0 1vw;
 
 }
+.testimony-matter{
+    font-size: 1.7vw;
+}
 .nssmessage{display: none;}
 .copyright{width: fit-content;}
+.sugg-det{
+    font-size: 1.5vw;
+}
+.suggestion{
+    font-size: 1.8vw;
+}
+}
 }
 @media  screen and (min-width:1200px) {
     .eventscroll{

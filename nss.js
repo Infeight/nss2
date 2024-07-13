@@ -107,6 +107,10 @@ document.getElementById("selbtn13").addEventListener("click", openevents)
 function openevents() {
     window.location.href = "/Events.html"
 }
+document.getElementById("gotoeve").addEventListener("click", openevents)
+function openevents() {
+    window.location.href = "/Events.html"
+}
 document.getElementById("selbtn14").addEventListener("click", openmembers)
 function openmembers() {
     window.location.href = "/members.html"
