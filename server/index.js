@@ -16,8 +16,10 @@ const upevents = require ('./mongoose.js')
 const experience = require ('./mongoose.js')
 const image = require('./mongoose.js')
 const pdf = require ('./mongoose.js')
+const sneakpeak = require ('./mongoose.js')
 const multer = require('multer')
 const path = require ('path')
+
 
 
 // import { name } from 'ejs';
@@ -72,6 +74,10 @@ const upeventupload =  multer({
   Storage
 }).single("testImage1")
 
+const sneakupload =  multer({
+  Storage
+}).single("testImage2")
+
 // app.get('/', function(req, res) {
 
 //   res.sendFile(path.join(__dirname,'./index.html'))
@@ -105,9 +111,6 @@ app.post('/uploadimg' ,async(req,res)=>{
       
      }
   })
-  // console.log(req.body)
-  // console.log(req.file)
-  // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
 
 })
 
@@ -129,10 +132,7 @@ app.post('/uploadpdf' ,(req,res)=>{
       .catch(err=>{console.log(err)})
      }
   })
-  // console.log(req.body)
-  // console.log(req.file)
-  // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
-  
+
 })
 
 app.post('/upevents' ,(req,res)=>{
@@ -156,11 +156,32 @@ app.post('/upevents' ,(req,res)=>{
       .catch(err=>{console.log(err)})
      }
   })
-  // console.log(req.body)
-  // console.log(req.file)
-  // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+
   
 })
+
+app.post('/sneakupload' ,async(req,res)=>{
+  sneakupload(req,res,(err)=>{
+    if(err){
+      console.log(err)
+    }
+    else{
+      const newsneak=  new  sneakpeak.sneakpeak({
+        name: req.body.name,
+        image:{
+          data: req.file.buffer,
+          contentType:'image/png'
+        }
+      })
+      newsneak.save()
+      .then(()=>{res.redirect('/')})
+      .catch(err=>{console.log(err)})
+      
+     }
+  })
+
+})
+
 
 
 
@@ -182,6 +203,12 @@ app.get('/upevents', async(req,res)=>{
   const upevent = await upevents.upevents.find();
   res.send(upevent)
 })
+
+app.get('/sneakpeaks', async(req,res)=>{
+  const sneakpeak = await sneakpeak.sneakpeak.find();
+  res.send(sneakpeak)
+})
+
 
 app.get('/experience', async(req,res)=>{
   const exp = await experience.experience.find();

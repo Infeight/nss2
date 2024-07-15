@@ -3,8 +3,10 @@
 const upeve = async()=>{
     const data = await fetch('https://nss2server.vercel.app/upevents');
     const exp = await fetch('https://nss2server.vercel.app/experience')
+    const sneakpeaks =  await fetch('https://nss2server.vercel.app/sneakpeaks')
     const allupevents =await data.json();
     const allexp = await exp.json();
+    const allsneakpeaks = await sneakpeaks.json()
     console.log(allupevents)
    allupevents.reverse()
     const base64arr = []
@@ -18,6 +20,22 @@ const upeve = async()=>{
          );
     base64arr.push(base64String)
     })
+
+    const base64arr1 = [];
+
+    allsneakpeaks.forEach(Element=>{
+        const arr =   new Uint8Array(Element.image.data.data);
+        console.log(arr)
+    const base64String = 
+
+         btoa(
+            arr.reduce((data, byte) => data + String.fromCharCode(byte), '')
+         );
+    base64arr1.push(base64String)
+    })
+
+
+
   console.log(base64arr)
     document.getElementById("event1").innerHTML = `${allupevents[0]?allupevents[0].Title:"No event"}(${allupevents[0]?allupevents[0].Date:""})`
     document.getElementById("event2").innerHTML = `${allupevents[1]?allupevents[1].Title:"No event"}(${allupevents[1]?allupevents[1].Date:""})`
@@ -36,6 +54,15 @@ const upeve = async()=>{
      document.getElementById("event33-img").src = `data:image/png;base64,${base64arr[2]?base64arr[2]:""}`
      document.getElementById("event44-img").src = `data:image/png;base64,${base64arr[3]?base64arr[3]:""}`
      document.getElementById("event55-img").src = `data:image/png;base64,${base64arr[4]?base64arr[4]:""}`
+
+
+     document.getElementById("pic1").src = `data:image/png;base64,${base64arr1[0]?base64arr1[0]:""}`
+     document.getElementById("pic2").src = `data:image/png;base64,${base64arr1[1]?base64arr1[1]:""}`
+     document.getElementById("pic3").src = `data:image/png;base64,${base64arr1[2]?base64arr1[2]:""}`
+     document.getElementById("pic4").src = `data:image/png;base64,${base64arr1[3]?base64arr1[3]:""}`
+     document.getElementById("pic5").src = `data:image/png;base64,${base64arr1[4]?base64arr1[4]:""}`
+     document.getElementById("pic6").src = `data:image/png;base64,${base64arr1[5]?base64arr1[5]:""}`
+
 
 
      allexp.forEach(Element=>{
