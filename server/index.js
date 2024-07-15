@@ -205,7 +205,7 @@ app.get('/upevents', async(req,res)=>{
 })
 
 app.get('/sneakpeaks', async(req,res)=>{
-  const sneakpeak = await sneakpeak.sneakpeak.find();
+  const sneakpeak = await events.sneakpeak.find()
   res.send(sneakpeak)
 })
 
