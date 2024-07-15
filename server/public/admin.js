@@ -5,11 +5,13 @@ const events = async()=>{
   const pdfdata = await fetch('https://nss2server.vercel.app/eventpdf');
   const upevents = await fetch('https://nss2server.vercel.app/upevents');
   const experience = await fetch ('https://nss2server.vercel.app/experience')
+  const sneakpeaks = await fetch ('https://nss2server.vercel.app/sneakpeaks')
   
   const allevents = await data.json()
   const allpdfs = await pdfdata.json()
   const allupevents = await upevents.json()
   const allexperience = await experience.json()
+  const allsneakpeaks = await sneakpeaks.json()
 
   console.log(allevents)
 
@@ -67,6 +69,24 @@ const events = async()=>{
     
   });
 
+  allsneakpeaks.forEach(element => {
+    const alleventdisp = document.createElement("div")
+    const eventname = document.createElement("li")
+    const delbtn = document.createElement("button")
+
+    eventname.innerHTML = element.name
+    delbtn.innerText = "Delete"
+    delbtn.addEventListener("click",deletesneak)
+
+   alleventdisp.className = "alleventdisp"
+   eventname.className = "eventname"
+    alleventdisp.appendChild(eventname)
+    alleventdisp.appendChild(delbtn)
+
+    document.getElementById("sneaks").append(alleventdisp)
+    
+  });
+
   allexperience.forEach(element => {
     const alleventdisp = document.createElement("div")
     const eventname = document.createElement("li")
@@ -112,6 +132,13 @@ const deletepdf = async(e)=>{
     
        await fetch ('https://nss2server.vercel.app/deleteupevent',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
     }
+
+    const deletesneak = async(e)=>{
+      e.target.closest('.alleventdisp').style.backgroundColor = "red"
+      const detail=   {name: e.target.closest('.alleventdisp').querySelector(".eventname").innerText}
+      
+         await fetch ('https://nss2server.vercel.app/deletesneak',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
+      }
 
     const deleteexp = async(e)=>{
       e.target.closest('.alleventdisp').style.backgroundColor = "red"

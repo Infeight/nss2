@@ -264,6 +264,19 @@ app.post('/deletepdf',async(req,res)=>{
    res.redirect('/')
  })
 
+ app.post('/deletesneak',async(req,res)=>{
+  const event = {name:req.body.name}
+   const allevents = await sneakpeak.sneakpeak.findOne(event);
+   if(allevents){
+    await sneakpeak.sneakpeak.deleteOne(allevents)
+    
+    console.log("deleted")
+   }
+ 
+ 
+   res.redirect('/')
+ })
+
  app.post('/deleteexp',async(req,res)=>{
   const event = {Name:req.body.Name}
    const allevents = await experience.experience.findOne(event);
