@@ -1,11 +1,11 @@
 // document.body.style.backgroundColor = "red"
 
 const events = async()=>{
-    const data = await fetch('https://nss2server.vercel.app/events');
-  const pdfdata = await fetch('https://nss2server.vercel.app/eventpdf');
-  const upevents = await fetch('https://nss2server.vercel.app/upevents');
-  const experience = await fetch ('https://nss2server.vercel.app/experience')
-  const sneakpeaks = await fetch ('https://nss2server.vercel.app/sneakpeaks')
+    const data = await fetch('https://nss-server-zeta.vercel.app/events');
+  const pdfdata = await fetch('https://nss-server-zeta.vercel.app/eventpdf');
+  const upevents = await fetch('https://nss-server-zeta.vercel.app/upevents');
+  const experience = await fetch ('https://nss-server-zeta.vercel.app/experience')
+  const sneakpeaks = await fetch ('https://nss-server-zeta.vercel.app/sneakpeaks')
   
   const allevents = await data.json()
   const allpdfs = await pdfdata.json()
@@ -117,33 +117,33 @@ const deleteeve = async(e)=>{
 
 const detail=   {name: e.target.closest('.alleventdisp').querySelector(".eventname").innerText}
   e.target.closest('.alleventdisp').style.backgroundColor = "red"
-   await fetch ('https://nss2server.vercel.app/deleteevent',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
+   await fetch ('https://nss-server-zeta.vercel.app/deleteevent',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
 }
 const deletepdf = async(e)=>{
   e.target.closest('.alleventdisp').style.backgroundColor = "red"
   const detail=   {name: e.target.closest('.alleventdisp').querySelector(".eventname").innerText}
   
-     await fetch ('https://nss2server.vercel.app/deletepdf',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
+     await fetch ('https://nss-server-zeta.vercel.app/deletepdf',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
   }
 
   const deleteupeve = async(e)=>{
     e.target.closest('.alleventdisp').style.backgroundColor = "red"
     const detail=   {Title: e.target.closest('.alleventdisp').querySelector(".eventname").innerText}
     
-       await fetch ('https://nss2server.vercel.app/deleteupevent',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
+       await fetch ('https://nss-server-zeta.vercel.app/deleteupevent',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
     }
 
     const deletesneak = async(e)=>{
       e.target.closest('.alleventdisp').style.backgroundColor = "red"
       const detail=   {name: e.target.closest('.alleventdisp').querySelector(".eventname").innerText}
       
-         await fetch ('https://nss2server.vercel.app/deletesneak',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
+         await fetch ('https://nss-server-zeta.vercel.app/deletesneak',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
       }
 
     const deleteexp = async(e)=>{
       e.target.closest('.alleventdisp').style.backgroundColor = "red"
       const detail=   {Name: e.target.closest('.alleventdisp').querySelector(".stuname").innerText}
       
-         await fetch ('https://nss2server.vercel.app/deleteexp',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
+         await fetch ('https://nss-server-zeta.vercel.app/deleteexp',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
       }
 
