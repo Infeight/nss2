@@ -95,6 +95,10 @@ button{
     height: 35vw;
     border-color: rgb(255, 247, 0);
 }
+#sneakpeak{
+    width: 100%;
+    height: 20vw;
+}
 
 .eventsdisp{
     margin-bottom: 1vw;
