@@ -132,6 +132,10 @@ button{
         #upevents{
             height: 40vw;
         }
+        #sneakpeak{
+            width: 100%;
+            height: 40vw;
+        }
     }
 }
 @media screen and (min-width:700px) {
@@ -144,6 +148,10 @@ button{
     }
     #upevents{
         height: 45vw;
+    }
+    #sneakpeak{
+        width: 100%;
+        height: 30vw;
     }
     button{
         font-size: 2vw;
@@ -189,6 +197,10 @@ button{
     #upevents{
         width: 100%;
         height: 75vw;
+    }
+    #sneakpeak{
+        width: 100%;
+        height: 50vw;
     }
     button{
         font-size: 4.5vw;
