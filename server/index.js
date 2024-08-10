@@ -10,7 +10,7 @@ const pdf = require ('./mongoose.js')
 const sneakpeak = require ('./mongoose.js')
 const multer = require('multer')
 const path = require ('path');
-const { METHODS } = require('http');
+
 
 // HTTP/1.1 200 OK
 // 
@@ -19,16 +19,21 @@ const { METHODS } = require('http');
 const app = express()
 
 const corsheader = {
-  origin: 'https://nssiiitdmkurnool.netlify.app/',
-  METHODS:['GET','POST'],
-  allowedHeaders:['Content-Type', 'Authorization'],
-  credentials:true
+  // origin: 'https://nss2-phi.vercel.app/',
+  // METHODS:['GET','POST'],
+  // allowedHeaders:['Content-Type', 'Authorization'],
+  // credentials:true
+
+  'Content-Type': 'application/json',
+  'Access-Control-Allow-Origin': 'https://nss2-phi.vercel.app/',
+  'Access-Control-Allow-Methods': '*',
+  'Access-Control-Allow-Headers': '*'
 }
 
 app.use(cors(corsheader))
-
-app.use(express.json())
 app.use(express.urlencoded({extended:false}))
+app.use(express.json())
+
 app.use(express.static(path.join(__dirname, 'public')))
 
 

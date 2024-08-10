@@ -1,7 +1,7 @@
 
 
 const upeve = async()=>{
-    const data = await fetch('https://nss2server.vercel.app/upevents');
+    const data = fetch('https://nss2server.vercel.app/upevents',{method:'GET', headers:{'Content-Type': 'application/json'}, credentials:'include'});
     const exp = await fetch('https://nss2server.vercel.app/experience')
     const sneakpeaks =  await fetch('https://nss2server.vercel.app/sneakpeaks')
     const allupevents =await data.json();
