@@ -2,7 +2,7 @@
 // const cors = require('cors/')
 
 const events = async()=>{
-  const data = await fetch('https://nss2server.vercel.app/events', {'Access-Control-Allow-Origin': '*'});
+  const data = await fetch('https://nss2server.vercel.app/events', {'Access-Control-Allow-Origin': '*',mode:'cors', credentials:'include'});
   const pdfdata = await fetch('https://nss2server.vercel.app/eventpdf');
   const allevents = await data.json()
   const allpdfs = await pdfdata.json()
