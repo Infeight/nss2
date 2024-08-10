@@ -2,7 +2,7 @@
 // const cors = require('cors/')
 
 const events = async()=>{
-  const data = await fetch('https://nss2server.vercel.app/events', {headers:{mode:'cors', credentials:'include'}});
+  const data = await fetch('https://nss2server.vercel.app/events', {mode:'cors', credentials:'include'});
   const pdfdata = await fetch('https://nss2server.vercel.app/eventpdf');
   const allevents = await data.json()
   const allpdfs = await pdfdata.json()
