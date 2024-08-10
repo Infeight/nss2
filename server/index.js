@@ -15,13 +15,13 @@ const path = require ('path');
 // HTTP/1.1 200 OK
 // 
 // Access-Control-Allow-Credentials: true
-
+// 'Access-Control-Allow-Credentials': true,
 const app = express()
 
 const corsheader = {
 
 'Access-Control-Allow-Origin': 'https://nss2-phi.vercel.app/',
-'Access-Control-Allow-Credentials': true,
+
 'Access-Control-Allow-Methods': 'GET, DELETE, HEAD, OPTIONS'
 }
 
