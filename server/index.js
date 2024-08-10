@@ -19,7 +19,7 @@ const { METHODS } = require('http');
 const app = express()
 
 const corsheader = {
-  origin: 'https://nss2-phi.vercel.app/',
+  origin: 'https://nssiiitdmkurnool.netlify.app/',
   METHODS:['GET','POST'],
   allowedHeaders:['Content-Type', 'Authorization'],
   credentials:true
