@@ -19,7 +19,7 @@ const { METHODS } = require('http');
 const app = express()
 
 const corsheader = {
-  origin: '*',
+  origin: 'https://nss2-phi.vercel.app/events',
   METHODS:['GET','POST'],
   allowedHeaders:['Content-Type', 'Authorization'],
   credentials:true
