@@ -18,14 +18,15 @@ const path = require ('path');
 // 'Access-Control-Allow-Credentials': true,
 const app = express()
 
-const corsheader = {
+// const corsheader = {
 
-'Access-Control-Allow-Origin': 'https://nss2-phi.vercel.app/',
+// 'Access-Control-Allow-Origin': 'https://nss2-phi.vercel.app/',
 
-'Access-Control-Allow-Methods': 'GET, DELETE, HEAD, OPTIONS'
-}
+// 'Access-Control-Allow-Methods': 'GET, DELETE, HEAD, OPTIONS'
+// }
 
-app.use(cors(corsheader))
+app.use(cors({origin:'*'}))
+app.options('*',cors())
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 
