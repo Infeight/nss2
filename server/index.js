@@ -11,7 +11,7 @@ const sneakpeak = require ('./mongoose.js')
 const multer = require('multer')
 const path = require ('path')
 
-
+// Access-Control-Allow-Origin: *
 
 // import { name } from 'ejs';
 const app = express()
@@ -20,6 +20,7 @@ const app = express()
 // const __dirname = path.resolve()
 
 app.use(cors('https://nssiiitdmkurnool.netlify.app/events'))
+
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(express.static(path.join(__dirname, 'public')))
