@@ -25,7 +25,7 @@ const corsheader = {
   // credentials:true
 
 'Access-Control-Allow-Origin': 'https://nss2-phi.vercel.app/',
-'Access-Control-Allow-Credentials': true
+'Access-Control-Allow-Methods': 'GET, DELETE, HEAD, OPTIONS'
 }
 
 app.use(cors(corsheader))
