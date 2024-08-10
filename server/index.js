@@ -9,7 +9,8 @@ const image = require('./mongoose.js')
 const pdf = require ('./mongoose.js')
 const sneakpeak = require ('./mongoose.js')
 const multer = require('multer')
-const path = require ('path')
+const path = require ('path');
+const { METHODS } = require('http');
 
 // HTTP/1.1 200 OK
 // 
@@ -17,12 +18,14 @@ const path = require ('path')
 
 const app = express()
 
+const corsheader = {
+  origin: 'https://nssiiitdmkurnool.netlify.app',
+  METHODS:['GET','POST'],
+  allowedHeaders:['Content-Type', 'Authorization'],
+  credentials:true
+}
 
-// const __dirname = path.resolve()
-const myheaders = new Headers()
-myheaders.append("Access-Control-Allow-Origin: *")
-// myheaders.append("")
-app.use(cors('https://nssiiitdmkurnool.netlify.app/events'))
+app.use(cors(corsheader))
 
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
