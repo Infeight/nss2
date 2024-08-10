@@ -1,13 +1,4 @@
-// import express from 'express';
-// import cors from 'cors'
-// import bodyParser from 'body-parser';
-// import events from './mongoose.js';
-// import upevents from './mongoose.js'
-// import experience from './mongoose.js'
-// import image from './mongoose.js'
-// import pdf from './mongoose.js'
-// import multer from 'multer';
-// import path from 'path'
+
 const express = require ('express');
 const cors = require ('cors')
 const bodyParser = require ('body-parser')
@@ -28,7 +19,7 @@ const app = express()
 
 // const __dirname = path.resolve()
 
-app.use(cors())
+app.use(cors('https://nssiiitdmkurnool.netlify.app/events'))
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(express.static(path.join(__dirname, 'public')))
