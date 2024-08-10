@@ -11,9 +11,10 @@ const sneakpeak = require ('./mongoose.js')
 const multer = require('multer')
 const path = require ('path')
 
-// Access-Control-Allow-Origin: *
+// HTTP/1.1 200 OK
+// Access-Control-Allow-Origin: https://example.com
+// Access-Control-Allow-Credentials: true
 
-// import { name } from 'ejs';
 const app = express()
 
 
@@ -181,6 +182,7 @@ app.post('/sneakupload' ,async(req,res)=>{
 
 
 app.get('/events', async(req,res)=>{
+  
   const event = await image.image.find();
   
   res.send(event)
