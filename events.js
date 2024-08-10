@@ -1,5 +1,5 @@
 
-
+// const cors = require('cors/')
 
 const events = async()=>{
   const data = await fetch('https://nss2server.vercel.app/events');
