@@ -19,10 +19,6 @@ const path = require ('path');
 const app = express()
 
 const corsheader = {
-  // origin: 'https://nss2-phi.vercel.app/',
-  // METHODS:['GET','POST'],
-  // allowedHeaders:['Content-Type', 'Authorization'],
-  // credentials:true
 
 'Access-Control-Allow-Origin': 'https://nss2-phi.vercel.app/',
 'Access-Control-Allow-Credentials': true,
