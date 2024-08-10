@@ -4,7 +4,7 @@
 
 
 const events = async()=>{
-  const data = await fetch('https://nss2server.vercel.app/events');
+  const data = await fetch('https://nss2server.vercel.app/events',{method:'GET', headers:{'Content-Type':'application/json'},credentials:'include'});
   const pdfdata = await fetch('https://nss2server.vercel.app/eventpdf');
   const allevents = await data.json()
   const allpdfs = await pdfdata.json()
