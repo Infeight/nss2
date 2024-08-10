@@ -24,10 +24,8 @@ const corsheader = {
   // allowedHeaders:['Content-Type', 'Authorization'],
   // credentials:true
 
-  'Content-Type': 'application/json',
-  'Access-Control-Allow-Origin': 'https://nss2-phi.vercel.app/',
-  'Access-Control-Allow-Methods': '*',
-  'Access-Control-Allow-Headers': '*'
+'Access-Control-Allow-Origin': 'https://nss2-phi.vercel.app/',
+'Access-Control-Allow-Credentials': true
 }
 
 app.use(cors(corsheader))
