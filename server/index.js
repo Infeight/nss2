@@ -12,14 +12,16 @@ const multer = require('multer')
 const path = require ('path')
 
 // HTTP/1.1 200 OK
-// Access-Control-Allow-Origin: https://example.com
+// 
 // Access-Control-Allow-Credentials: true
 
 const app = express()
 
 
 // const __dirname = path.resolve()
-
+const myheaders = new Headers()
+myheaders.append("Access-Control-Allow-Origin: *")
+// myheaders.append("")
 app.use(cors('https://nssiiitdmkurnool.netlify.app/events'))
 
 app.use(express.json())
