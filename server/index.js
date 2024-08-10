@@ -25,8 +25,8 @@ const app = express()
 // 'Access-Control-Allow-Methods': 'GET, DELETE, HEAD, OPTIONS'
 // }
 
-app.use(cors({origin:'https://nss2-phi.vercel.app/events'}))
-app.options('https://nss2-phi.vercel.app/events',cors({origin:'https://nss2-phi.vercel.app/events',credentials:true}))
+app.use(cors({origin:'https://nss2-phi.vercel.app/'}))
+app.options('https://nss2-phi.vercel.app/',cors({origin:'https://nss2-phi.vercel.app/',credentials:true}))
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 
