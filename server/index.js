@@ -18,24 +18,20 @@ const path = require ('path');
 // 'Access-Control-Allow-Credentials': true,
 const app = express()
 
-// const corsheader = {
+app.use(cors({origin:'https://nss2-phi.vercel.app/'}))
 
-// 'Access-Control-Allow-Origin': 'https://nss2-phi.vercel.app/',
+// const allowed = ['https://nss2-phi.vercel.app/','https://nss2-phi.vercel.app/events','https://nss2-phi.vercel.app/upevents','https://nss2-phi.vercel.app/experince' ]
 
-// 'Access-Control-Allow-Methods': 'GET, DELETE, HEAD, OPTIONS'
+// app.use(cors({origin:(origin,callback)=>{
+//           if(!origin || allowed.includes(origin)){
+//             callback(null,true)
+//           }
+//           else{
+//             callback(new Error('no cors'))
+//           }
 // }
-const allowed = ['https://nss2-phi.vercel.app/','https://nss2-phi.vercel.app/events','https://nss2-phi.vercel.app/upevents','https://nss2-phi.vercel.app/experince' ]
-
-app.use(cors({origin:(origin,callback)=>{
-          if(!origin || allowed.includes(origin)){
-            callback(null,true)
-          }
-          else{
-            callback(new Error('no cors'))
-          }
-}
-, credentials:true
-}))
+// , credentials:true
+// }))
 // app.options('https://nss2-phi.vercel.app/',cors({origin:'https://nss2-phi.vercel.app/',credentials:true}))
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
