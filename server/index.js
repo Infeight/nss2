@@ -16,19 +16,17 @@ const path = require ('path');
 
 const app = express()
 
-app.use(cors({origin:'https://nssiiitdmkurnool.netlify.app/'}))
-// const allowed = ['https://nssiiitdmkurnool.netlify.app/','https://nss2server.vercel.app/']
-
-// app.use(cors({origin:(origin,callback)=>{
-//           if(!origin || allowed.includes(origin)){
-//             callback(null,true)
-//           }
-//           else{
-//             callback(new Error('no cors'))
-//           }
-// }
-// , credentials:true
-// }))
+// app.use(cors({origin:'https://nssiiitdmkurnool.netlify.app/'}))
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'http://example.com');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header('Access-Control-Allow-Credentials', 'true');
+  next();
+});
+app.options('*', (req, res) => {
+  res.sendStatus(200);
+});
 
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
