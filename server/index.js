@@ -12,27 +12,13 @@ const multer = require('multer')
 const path = require ('path');
 
 
-// HTTP/1.1 200 OK
-// 
-// Access-Control-Allow-Credentials: true
-// 'Access-Control-Allow-Credentials': true,
+
+
 const app = express()
 
-app.use(cors({origin:'https://nss2-phi.vercel.app/'}))
+app.use(cors({'https://nssiiitdmkurnool.netlify.app/'}))
 
-// const allowed = ['https://nss2-phi.vercel.app/','https://nss2-phi.vercel.app/events','https://nss2-phi.vercel.app/upevents','https://nss2-phi.vercel.app/experince' ]
 
-// app.use(cors({origin:(origin,callback)=>{
-//           if(!origin || allowed.includes(origin)){
-//             callback(null,true)
-//           }
-//           else{
-//             callback(new Error('no cors'))
-//           }
-// }
-// , credentials:true
-// }))
-// app.options('https://nss2-phi.vercel.app/',cors({origin:'https://nss2-phi.vercel.app/',credentials:true}))
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 
@@ -44,10 +30,7 @@ app.listen(port, ()=>{
     console.log(`listening on ${port}`)
 })
 
-// app.set("view engine", "ejs");
-// app.set("views",path.resolve("./views"))
 
-//multer storage
 const Storage = multer.diskStorage({
   destination:function(req,file,cb){
    return cb(null,'./uploads')
