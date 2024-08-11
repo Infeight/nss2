@@ -16,7 +16,7 @@ const path = require ('path');
 
 const app = express()
 
-app.use(cors({origin:'*'}))
+app.use(cors());
 
 // const allowed = ['https://nss2-phi.vercel.app/','https://nss2-phi.vercel.app/events','https://nss2-phi.vercel.app/upevents','https://nss2-phi.vercel.app/experince' ]
 
