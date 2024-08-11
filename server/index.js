@@ -12,10 +12,8 @@ const multer = require('multer')
 const path = require ('path');
 
 
-// HTTP/1.1 200 OK
-// 
-// Access-Control-Allow-Credentials: true
-// 'Access-Control-Allow-Credentials': true,
+
+
 const app = express()
 
 app.use(cors({origin:'*'}))
@@ -44,10 +42,7 @@ app.listen(port, ()=>{
     console.log(`listening on ${port}`)
 })
 
-// app.set("view engine", "ejs");
-// app.set("views",path.resolve("./views"))
 
-//multer storage
 const Storage = multer.diskStorage({
   destination:function(req,file,cb){
    return cb(null,'./uploads')
