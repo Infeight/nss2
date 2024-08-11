@@ -16,20 +16,20 @@ const path = require ('path');
 
 const app = express()
 
-app.use(cors({origin:'*'}))
+// app.use(cors({origin:'*'}))
 
-// const allowed = ['https://nss2-phi.vercel.app/','https://nss2-phi.vercel.app/events','https://nss2-phi.vercel.app/upevents','https://nss2-phi.vercel.app/experince' ]
+const allowed = ['https://nssiiitdmkurnool.netlify.app/','https://nss2server.vercel.app/']
 
-// app.use(cors({origin:(origin,callback)=>{
-//           if(!origin || allowed.includes(origin)){
-//             callback(null,true)
-//           }
-//           else{
-//             callback(new Error('no cors'))
-//           }
-// }
-// , credentials:true
-// }))
+app.use(cors({origin:(origin,callback)=>{
+          if(!origin || allowed.includes(origin)){
+            callback(null,true)
+          }
+          else{
+            callback(new Error('no cors'))
+          }
+}
+, credentials:true
+}))
 // app.options('https://nss2-phi.vercel.app/',cors({origin:'https://nss2-phi.vercel.app/',credentials:true}))
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
