@@ -18,7 +18,7 @@ const app = express()
 
 // app.use(cors({origin:'https://nssiiitdmkurnool.netlify.app/'}))
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://example.com');
+  res.header('Access-Control-Allow-Origin', 'https://nssiiitdmkurnool.netlify.app/');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   res.header('Access-Control-Allow-Credentials', 'true');
