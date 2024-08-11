@@ -16,19 +16,19 @@ const path = require ('path');
 
 const app = express()
 
+app.use(cors({origin:'https://nssiiitdmkurnool.netlify.app/'}))
+// const allowed = ['https://nssiiitdmkurnool.netlify.app/','https://nss2server.vercel.app/']
 
-const allowed = ['https://nssiiitdmkurnool.netlify.app/','https://nss2server.vercel.app/']
-
-app.use(cors({origin:(origin,callback)=>{
-          if(!origin || allowed.includes(origin)){
-            callback(null,true)
-          }
-          else{
-            callback(new Error('no cors'))
-          }
-}
-, credentials:true
-}))
+// app.use(cors({origin:(origin,callback)=>{
+//           if(!origin || allowed.includes(origin)){
+//             callback(null,true)
+//           }
+//           else{
+//             callback(new Error('no cors'))
+//           }
+// }
+// , credentials:true
+// }))
 
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
