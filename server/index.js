@@ -17,7 +17,7 @@ const path = require ('path');
 const app = express()
 
 
-const allowed = ['https://nssiiitdmkurnool.netlify.app/','https://nss2server.vercel.app/','https://nss2server.vercel.app/events']
+const allowed = ['https://nssiiitdmkurnool.netlify.app/','https://nss2server.vercel.app/']
 
 app.use(cors({origin:(origin,callback)=>{
           if(!origin || allowed.includes(origin)){
