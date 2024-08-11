@@ -18,7 +18,7 @@ const path = require ('path');
 // 'Access-Control-Allow-Credentials': true,
 const app = express()
 
-app.use(cors({origin:'https://nss2-phi.vercel.app/'}))
+app.use(cors({origin:'*'}))
 
 // const allowed = ['https://nss2-phi.vercel.app/','https://nss2-phi.vercel.app/events','https://nss2-phi.vercel.app/upevents','https://nss2-phi.vercel.app/experince' ]
 
