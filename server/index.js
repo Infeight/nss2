@@ -16,7 +16,7 @@ const path = require ('path');
 
 const app = express()
 
-app.use(cors());
+app.use(cors({origin:'https://nssiiitdmkurnool.netlify.app/'}));
 
 // const allowed = ['https://nss2-phi.vercel.app/','https://nss2-phi.vercel.app/events','https://nss2-phi.vercel.app/upevents','https://nss2-phi.vercel.app/experince' ]
 
