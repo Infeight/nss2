@@ -16,7 +16,7 @@ const path = require ('path');
 
 const app = express()
 
-app.use(cors({origin:'https://nssiiitdmkurnool.netlify.app/'}))
+app.use(cors({origin:'https://nssiiitdmkurnool.netlify.app//'}))
 
 
 app.use(express.urlencoded({extended:false}))
